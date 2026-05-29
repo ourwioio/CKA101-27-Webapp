@@ -215,7 +215,7 @@ public class VenueImagesServlet extends HttpServlet {
 			/*************************** 1.接收請求參數 - 輸入格式的錯誤處理 **********************/
 			String str = req.getParameter("venueId");
 			if (str == null || (str.trim()).length() == 0) {
-				errorMsgs.add("請選擇場地編號");
+				errorMsgs.add("請輸入場地編號");
 			}
 			if (!errorMsgs.isEmpty()) {
 				RequestDispatcher failureView = req.getRequestDispatcher("/venueimages/select_page.jsp");
