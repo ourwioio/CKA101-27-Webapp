@@ -5,8 +5,6 @@ import java.io.InputStream;
 import java.util.LinkedList;
 import java.util.List;
 
-import com.emp.model.EmpService;
-import com.emp.model.EmpVO;
 import com.venueimages.model.VenueImagesService;
 import com.venueimages.model.VenueImagesVO;
 

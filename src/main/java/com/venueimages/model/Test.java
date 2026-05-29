@@ -6,9 +6,9 @@ import java.util.List;
 
 public class Test {
 	public static void main(String[] args) throws IOException {
-		byte[] pic = getPictureByteArray("src/images/IMG_8118.JPG");
-		byte[] pic2 = getPictureByteArray("src/images/IMG_8124.PNG");
-		byte[] pic3= getPictureByteArray("src/images/IMG_8076.JPG");
+		byte[] pic = getPictureByteArray("src/images/IMG_8118.jpg");
+		byte[] pic2 = getPictureByteArray("src/images/IMG_8124.jpg");
+		byte[] pic3= getPictureByteArray("src/images/IMG_8076.jpg");
 //		VenueImagesVO vi = new VenueImagesVO(2, 2001, pic);
 
 //		VenueImagesDAO dao = new VenueImagesDAO();
