@@ -6,9 +6,28 @@
 <title>VenueImages Home</title>
 
 <style>
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    padding-top: 25px; 
+    
+    min-height: 100vh;
+    background-color: #f9f9f9;
+}
+
+.container {
+    text-align: left;       
+    width: 100%;
+    max-width: 600px;   
+    padding: 20px;
+}
 h3#top {
 	width: 450px;
-	background-color: #CCCCFF;
+	background-color: #CAFFFF;
 	margin-top: 5px;
 	margin-bottom: 10px;
 	border: 3px ridge Gray;
@@ -41,7 +60,7 @@ h4 {
 </head>
 <body bgcolor='white'>
 	<h3 id="top">場地圖片查詢 - select_page.jsp</h3>
-	<h3>圖片查詢:</h3>
+	<h3>場地圖片查詢:</h3>
 
 	<%-- 錯誤表列 --%>
 	<c:if test="${not empty errorMsgs}">
