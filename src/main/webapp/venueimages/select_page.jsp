@@ -40,8 +40,8 @@ h4 {
 
 </head>
 <body bgcolor='white'>
-	<h3 id="top">資料查詢 - select_page.jsp</h3>
-	<h3>資料查詢:</h3>
+	<h3 id="top">場地圖片查詢 - select_page.jsp</h3>
+	<h3>圖片查詢:</h3>
 
 	<%-- 錯誤表列 --%>
 	<c:if test="${not empty errorMsgs}">
