@@ -80,24 +80,22 @@ th, td {
 		<table>
 			<tr>
 				<td>場地編號:</td>
-				<td><b></b> <select size="1" name="venueId">
+				<td>
+					<select size="1" name="venueId">
 						<option value="">--- 請選擇場地 ---</option>
 						<c:forEach var="venueId" items="${vis.allVenueIds}">
-							<option value="${venueId}">${venueId}
+							<option value="${venueId}" ${(viVO.venueId == venueId) ? 'selected' : ''}>${venueId}
 						</c:forEach>
-				</select></td>
+					</select>
+				</td>
 			</tr>
 
-			<!-- 			<tr> -->
-			<!-- 				<td>場地編號:</td> -->
-			<!-- 				<td><input type="TEXT" name="venueId"  -->
-			<%-- 					value="<%=(viVO == null) ? "2001" : viVO.getVenueId()%>" size="45" /></td> --%>
-			<!-- 			</tr> -->
-
 			<tr>
-				<td>場地圖片:</td>
+				<td style="vertical-align: top">場地圖片:</td>
 				<td>
-					<input type="file" name="upfile1" accept=".jpg, .jpeg, .png" />
+					<input type="file" name="upfile1" accept=".jpg, .jpeg, .png" onchange="previewImage(this)"/>
+					<br>
+					<img id="preview" src="" style="display:none; margin-top:10px; max-width:200px; border:1px solid #ccc; border-radius:8px;"/>
 				</td>
 			</tr>
 
@@ -105,7 +103,24 @@ th, td {
 		<br> <input type="hidden" name="action" value="insert"> 
 			 <input type="submit" value="送出新增">
 	</FORM>
-
+	<script>
+	    function previewImage(input) {
+	        var preview = document.getElementById("preview");
+	        
+	        if (input.files && input.files[0]) {
+	            var reader = new FileReader();
+	            
+	            reader.onload = function(e) {
+	                preview.src = e.target.result;  // 把圖片放進 img
+	                preview.style.display = "block"; // 顯示出來
+	            }
+	            
+	            reader.readAsDataURL(input.files[0]); // 讀取圖片
+	        } else {
+	            preview.style.display = "none";  // 沒有選就隱藏
+	        }
+	    }
+	</script>
 </body>
 
 

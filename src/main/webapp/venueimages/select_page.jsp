@@ -73,20 +73,22 @@ h4 {
 	</c:if>
 
 	<ul>
-		<li><a href='listAllVenueImages.jsp'>List</a> all VenueImages. <br>
-			<br></li>
+		<li>
+			<a href='listAllVenueImages.jsp'>List</a> all VenueImages. <br>
+			<br>
+		</li>
 
 
 		<li>
 			<FORM METHOD="post" ACTION="venueimages.do">
-				<b>輸入圖片編號 (如5001):</b> <input type="text" name="imagesId"> <input
-					type="hidden" name="action" value="getOne_For_Display"> <input
-					type="submit" value="送出">
+				<b>輸入圖片編號 (如5001):</b> 
+				<input type="text" name="imagesId"> 
+				<input type="hidden" name="action" value="getOne_For_Display"> 
+				<input type="submit" value="送出">
 			</FORM>
 		</li>
 
-		<jsp:useBean id="vis" scope="page"
-			class="com.venueimages.model.VenueImagesService" />
+		<jsp:useBean id="vis" scope="page" class="com.venueimages.model.VenueImagesService" />
 
 		<li>
 			<FORM METHOD="post" ACTION="venueimages.do">
@@ -103,7 +105,8 @@ h4 {
 		<br>
 		<li>
 			<FORM METHOD="post" ACTION="venueimages.do">
-				<b>選擇場地編號 (如2001):</b> <input type="text" name="venueId"> 
+				<b>選擇場地編號 (如2001):</b> 
+				<input type="text" name="venueId"> 
 				<input type="hidden" name="action" value="getVenueId_For_Display"> 
 				<input type="submit" value="送出">
 			</FORM>
