@@ -49,6 +49,8 @@ th, td {
 			<th>圖片編號</th>
 			<th>場地編號</th>
 			<th>圖片</th>
+			<th>修改</th>
+			<th>刪除</th>
 		</tr>
 
 		<c:forEach var="viVO" items="${list}">
@@ -61,6 +63,26 @@ th, td {
 					String base64 = Base64.getEncoder().encodeToString(viVO.getImages());
 					%> 
 					<img src="data:image/jpeg;base64,<%=base64%>" height="100"/>
+				</td>
+				<td>
+					<FORM METHOD="post"
+						ACTION="<%=request.getContextPath()%>/venueimages/venueimages.do"
+						style="margin-bottom: 0px;">
+						<input type="submit" value="修改"> <input type="hidden"
+							name="imagesId" value="${viVO.imagesId}"> <input
+							type="hidden" name="action" value="getOne_For_Update">
+					</FORM>
+				</td>
+				<td>
+					<FORM METHOD="post"
+						ACTION="<%=request.getContextPath()%>/venueimages/venueimages.do"
+						style="margin-bottom: 0px;">
+						<input type="submit" value="刪除"> 
+						<input type="hidden" name="imagesId" value="${viVO.imagesId}">
+						<!-- 把刪除的場地編號給controller再次查詢 -->
+						<input type="hidden" name="venueId" value="${viVO.venueId}"> 
+						<input type="hidden" name="action" value="delete1">
+					</FORM>
 				</td>
 			</tr>
 		</c:forEach>

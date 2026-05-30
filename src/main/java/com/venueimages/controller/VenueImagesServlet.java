@@ -249,6 +249,28 @@ public class VenueImagesServlet extends HttpServlet {
 			RequestDispatcher successView = req.getRequestDispatcher(url); // 成功轉交 listVenueIdImages.jsp
 			successView.forward(req, res);
 		}
+		
+		if ("delete1".equals(action)) { // 來自listAllEmp.jsp
+
+			List<String> errorMsgs = new LinkedList<String>();
+			// Store this set in the request scope, in case we need to
+			// send the ErrorPage view.
+			req.setAttribute("errorMsgs", errorMsgs);
+	
+				/***************************1.接收請求參數***************************************/
+				Integer imagesId = Integer.valueOf(req.getParameter("imagesId"));
+				Integer venueId = Integer.valueOf(req.getParameter("venueId"));
+				/***************************2.開始刪除資料***************************************/
+				VenueImagesService vis = new VenueImagesService();
+				vis.deleteImages(imagesId);
+				
+				/***************************3.刪除完成,準備轉交(Send the Success view)***********/								
+				List<VenueImagesVO> list = vis.getAllVenueImages(venueId); // 重新查詢
+			    req.setAttribute("list", list); // 存入 req
+				String url = "/venueimages/listVenueIdImages.jsp";
+				RequestDispatcher successView = req.getRequestDispatcher(url);// 刪除成功後,轉交回送出刪除的來源網頁
+				successView.forward(req, res);
+		}
 
 	}
 }

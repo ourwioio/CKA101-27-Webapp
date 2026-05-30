@@ -27,7 +27,7 @@ body {
 }
 h3#top {
 	width: 450px;
-	background-color: #CAFFFF;
+	background-color: #84C1FF;
 	margin-top: 5px;
 	margin-bottom: 10px;
 	border: 3px ridge Gray;

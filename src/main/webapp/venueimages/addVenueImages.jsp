@@ -3,7 +3,7 @@
 <%@ page import="com.venueimages.model.*"%>
 
 <%
-VenueImagesVO viVO = (VenueImagesVO) request.getAttribute("viVO");
+	VenueImagesVO viVO = (VenueImagesVO) request.getAttribute("viVO");
 %>
 
 <html>
