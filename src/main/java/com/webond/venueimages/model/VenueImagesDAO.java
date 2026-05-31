@@ -1,4 +1,4 @@
-package com.venueimages.model;
+package com.webond.venueimages.model;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

@@ -1,4 +1,4 @@
-package com.venueimages.model;
+package com.webond.venueimages.model;
 
 public class VenueImagesVO{
 	private Integer imagesId;

@@ -88,7 +88,7 @@ h4 {
 			</FORM>
 		</li>
 
-		<jsp:useBean id="vis" scope="page" class="com.venueimages.model.VenueImagesService" />
+		<jsp:useBean id="vis" scope="page" class="com.webond.venueimages.model.VenueImagesService" />
 
 		<li>
 			<FORM METHOD="post" ACTION="venueimages.do">

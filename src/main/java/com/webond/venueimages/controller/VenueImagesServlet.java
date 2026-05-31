@@ -1,12 +1,12 @@
-package com.venueimages.controller;
+package com.webond.venueimages.controller;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.LinkedList;
 import java.util.List;
 
-import com.venueimages.model.VenueImagesService;
-import com.venueimages.model.VenueImagesVO;
+import com.webond.venueimages.model.VenueImagesService;
+import com.webond.venueimages.model.VenueImagesVO;
 
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
