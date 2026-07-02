@@ -14,7 +14,7 @@ public class VenueImagesDAO implements VenueImagesDAO_interface {
 	String userid = "root";
 	String passwd = "123456";
 
-	private static final String INSERT_STMT = "INSERT INTO venue_images (venue_id, venue_images) VALUES (?, ?)";
+	private static final String INSERT_STMT = "INSERT INTO venue_images (venue_id, venue_images, VENUE_COVER) VALUES (?, ?, ?)";
 	private static final String Get_ALL_STMT = "SELECT * FROM venue_images";
 	private static final String GET_ONE_STMT = "SELECT * FROM venue_images WHERE venue_images_id = ?";
 	private static final String DELETE = "DELETE FROM venue_images WHERE venue_images_id = ?";
@@ -36,6 +36,7 @@ public class VenueImagesDAO implements VenueImagesDAO_interface {
 //			pstmt.setInt(1, venueImagesVO.getImagesId());
 			pstmt.setInt(1, venueImagesVO.getVenueId());
 			pstmt.setBytes(2, venueImagesVO.getImages());
+			pstmt.setByte(3, venueImagesVO.getCover());
 			pstmt.executeUpdate();
 
 			// 取得流水號

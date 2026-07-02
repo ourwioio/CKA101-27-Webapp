@@ -84,7 +84,7 @@ th, td {
 					<select size="1" name="venueId">
 						<option value="">--- 請選擇場地 ---</option>
 						<c:forEach var="venueId" items="${vis.allVenueIds}">
-							<option value="${venueId}" ${(viVO.venueId == venueId) ? 'selected' : ''}>${venueId}
+							<option value="${venueId}">${venueId}
 						</c:forEach>
 					</select>
 				</td>

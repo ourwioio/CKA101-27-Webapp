@@ -179,7 +179,7 @@ public class VenueImagesServlet extends HttpServlet {
 
 			/*************************** 2.開始修改資料 *****************************************/
 			VenueImagesService vis = new VenueImagesService();
-			viVO = vis.addImages(venueId, imgBytes);
+//			viVO = vis.addImages(venueId, imgBytes);
 			/*************************** 3.修改完成,準備轉交(Send the Success view) *************/
 			req.setAttribute("viVO", viVO);
 			String url = "/venueimages/listOneVenueImages.jsp";

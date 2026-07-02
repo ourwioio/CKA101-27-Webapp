@@ -9,12 +9,13 @@ public class VenueImagesService {
 		dao = new VenueImagesDAO();
 	}
 
-	public VenueImagesVO addImages(Integer venueId, byte[] images) {
+	public VenueImagesVO addImages(Integer venueId, byte[] images, Byte cover) {
 		VenueImagesVO viVO = new VenueImagesVO();
 
 //		viVO.setImagesId(imagesId);
 		viVO.setVenueId(venueId);
 		viVO.setImages(images);
+		viVO.setCover(cover);
 		dao.insert(viVO);
 
 		return viVO;

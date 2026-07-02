@@ -4,16 +4,18 @@ public class VenueImagesVO{
 	private Integer imagesId;
 	private Integer venueId;
 	private byte[] images;
+	private byte cover;
 
 	public VenueImagesVO() {
 		super();
 	}
 
-	public VenueImagesVO(Integer imagesId, Integer venueId, byte[] images) {
+	public VenueImagesVO(Integer imagesId, Integer venueId, byte[] images, byte cover) {
 		super();
 		this.imagesId = imagesId;
 		this.venueId = venueId;
 		this.images = images;
+		this.cover = cover;
 	}
 
 	public Integer getImagesId() {
@@ -40,9 +42,14 @@ public class VenueImagesVO{
 		this.images = images;
 	}
 
-	@Override
-	public String toString() {
-		return "VenueImagesVO [imagesId=" + imagesId + ", venueId=" + venueId + ", images=" + images + "]";
+	public byte getCover() {
+		return cover;
 	}
+
+	public void setCover(byte cover) {
+		this.cover = cover;
+	}
+
+	
 
 }
