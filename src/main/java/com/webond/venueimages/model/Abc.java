@@ -4,5 +4,6 @@ public class Abc {
  public Integer aaa;
  public Integer aba;
  public Integer abaaa;
+ public Integer abaaac;
  public Integer abaaabb;      
 }
